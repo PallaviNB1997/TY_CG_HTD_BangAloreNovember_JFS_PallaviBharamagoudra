@@ -1,0 +1,19 @@
+<!-- <p>customer works!</p> -->
+
+<div class="alert alert-success" *ngIf='message'>{{message}}</div>
+<div class="col-md-4 offset-md-4 mt-4">
+    <form #addProductForm='ngForm' (ngSubmit)='addProduct(addProductForm)'>
+        <div class="form-group">
+            <label for="name">Customer Name</label>
+            <input type="text" name="name" id="name" #name='ngModel' ngModel class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="url">Customer Image URL</label>
+            <input type="text" name="url" id="url" #url='ngModel' ngModel class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-outline-primary float-right">
+       Add Customer
+     </button>
+    </form>
+</div>
